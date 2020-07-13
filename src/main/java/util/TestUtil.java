@@ -136,6 +136,14 @@ public class TestUtil extends TestBase {
 		xls.setCellData(testCaseName, "Results", rowNum, result);
 		xls.setCellData(testCaseName, "Comments", rowNum, Comments);
 	}
+	
+	public static void updatelogindetails(XlsReader xls, String testCaseName, int rowNum, String emailid,String pass) {
+
+		xls.setCellData(testCaseName, "username", rowNum, emailid);
+		xls.setCellData(testCaseName, "password", rowNum, pass);
+	}
+	
+	
 
 	/**
 	 * This method for checking the Test case run mode is Yes or No

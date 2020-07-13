@@ -24,6 +24,8 @@ public class TestBase {
 	public static String Excelpath = "";
 	public static XlsReader inputdata;
 	public static String Errormessage = "";
+	public static String EmailID = "";
+	public static String CreatedPassword = "";
 	
 	public void initialize() throws Exception {
 

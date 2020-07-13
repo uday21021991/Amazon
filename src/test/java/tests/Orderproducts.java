@@ -19,6 +19,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import pages.HomePage;
 import pages.InvokeApplication;
 import pages.ProductListPage;
+import pages.SignUpPage;
 import util.TestBase;
 import util.TestUtil;
 import util.XlsReader;
@@ -86,6 +87,14 @@ public class Orderproducts extends TestBase{
 
 			break;
 			
+		case "4":
+			InvokeApplication.invokeapp();
+			new HomePage().createaccountButton();
+			new SignUpPage().createAcc();
+			TestUtil.updatelogindetails(AAxls, sheetName, count + 2, EmailID, CreatedPassword);
+			
+			break;
+			
 		default:
 			System.out.println("Given Scenario is not avilable in lit");
 			break;
@@ -135,7 +144,6 @@ public class Orderproducts extends TestBase{
 	public static Iterator<Object[]> getTestData() throws IOException {
 
 		ArrayList<Object[]> data = new ArrayList<Object[]>();
-		System.out.println("number of rows "+ AAxls.getRowCount(sheetName));
 		for (int i = 1; i < AAxls.getRowCount(sheetName); i++) {
 			data.add(new Object[] { new XlsReader(Excelpath, sheetName, i) });
 		}

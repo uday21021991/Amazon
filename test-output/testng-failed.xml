@@ -6,7 +6,7 @@
       <class name="tests.Orderproducts">
         <methods>
           <include name="reportDataSetResult"/>
-          <include name="orderProducts" invocation-numbers="0 1 2"/>
+          <include name="orderProducts" invocation-numbers="0 1 2 3"/>
           <include name="checkTestSkip"/>
           <include name="endtest"/>
         </methods>

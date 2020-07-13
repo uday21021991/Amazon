@@ -32,9 +32,12 @@ public class HomePage extends TestUtil {
 	@AndroidFindBy(xpath = "//*[@text='Skip sign in']")
 	private MobileElement Skip;
 
-	@AndroidFindBy(xpath = "//*[@text='Hello. Sign In']")
+	@AndroidFindBy(id = "com.amazon.mShop.android.shopping:id/sign_in_button")
 	private MobileElement LoginButton;
 
+	@AndroidFindBy(id = "com.amazon.mShop.android.shopping:id/new_user")	
+	private MobileElement CreateAccount;
+	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']")
 	private MobileElement UserName;
 
@@ -98,5 +101,8 @@ public class HomePage extends TestUtil {
 		
 	}
 	
+	public void createaccountButton() throws Exception {
+		clickElement(CreateAccount, "Create Account Button");
+	}
 
 }
